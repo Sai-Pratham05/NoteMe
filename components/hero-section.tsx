@@ -47,13 +47,13 @@ export default function HeroSection() {
         <section>
           <div className="relative pt-24">
             <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
               <div className="sm:mx-auto lg:mr-auto lg:mt-0">
                 <TextEffect
                   preset="fade-in-blur"
                   speedSegment={0.5}
                   as="h1"
-                  className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
+                  className="mt-8 max-w-2xl text-balance text-4xl sm:text-5xl font-medium md:text-6xl lg:mt-16"
                 >
                   Capture Every Thought, Effortlessly.
                 </TextEffect>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                   speedSegment={0.4}
                   delay={0.8}
                   as="p"
-                  className="mt-8 max-w-2xl text-pretty text-lg"
+                  className="mt-8 max-w-2xl text-pretty text-base sm:text-lg"
                 >
                   Your personal space to jot down ideas, organize tasks, and
                   remember everything important. Designed for clarity and speed.
@@ -82,16 +82,16 @@ export default function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-12 flex items-center gap-2"
+                  className="mt-12 flex flex-col sm:flex-row items-center gap-3 sm:gap-2"
                 >
                   <div
                     key={1}
-                    className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
+                    className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5 w-full sm:w-auto"
                   >
                     <Button
                       asChild
                       size="lg"
-                      className="rounded-xl px-5 text-base"
+                      className="rounded-xl px-5 text-base w-full"
                     >
                       <Link href="#link">
                         <span className="text-nowrap">Start Taking Notes </span>
@@ -103,7 +103,7 @@ export default function HeroSection() {
                     asChild
                     size="lg"
                     variant="ghost"
-                    className="h-10.5 rounded-xl px-5 text-base"
+                    className="h-10.5 rounded-xl px-5 text-base w-full sm:w-auto"
                   >
                     <Link href="#link">
                       <span className="text-nowrap">Explore Features </span>
@@ -125,14 +125,13 @@ export default function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+              <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
                 <div
                   aria-hidden
                   className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                 />
-                <div className="p-10"></div>
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-7xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15 ring-1 aspect-video h-[600px]">
-                  <h1 className="text-4xl font-bold text-center pt-6">
+                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-7xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15 ring-1 aspect-video h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center pt-4 sm:pt-6 px-4">
                     We Will Take Over the Globe
                   </h1>
                   <World

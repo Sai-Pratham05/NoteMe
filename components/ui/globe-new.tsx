@@ -3,14 +3,17 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Dynamically import the Globe component with no SSR
-const GlobeComponent = dynamic(() => import("./globe-client").then((m) => ({ default: m.World })), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center h-full w-full">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-    </div>
-  ),
-});
+const GlobeComponent = dynamic(
+  () => import("./globe-client").then((m) => ({ default: m.World })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex items-center justify-center h-full w-full">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+      </div>
+    ),
+  }
+);
 
 export interface WorldProps {
   globeConfig: {
